@@ -1,5 +1,5 @@
 {
-  "name": "amazon-transcribe-websocket-static",
+  "name": "ai-ml-workshop",
   "description": "A static site demonstrating real-time audio transcription via Amazon Transcribe over a WebSocket.",
   "version": "1.0.0",
   "author": {
