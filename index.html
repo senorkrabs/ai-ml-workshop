@@ -21,9 +21,10 @@
         <h2>AI/ML Workshop</h2>
 
         <h3 id="setup">Setup</h3>
+
         <li><strong>Code repo: </strong> https://github.com/jxuamazon/ai-ml-workshop </li>
         <li><strong>Your AWS account: </strong>https://dashboard.eventengine.run/login?hash=xxxxxxxxxxxx </li>
-        <li><strong>Download </strong> https://static.myoctank.net/public/ai-ml-workshop.zip to local folder. We will use it for lab 2. </li>
+        <li><strong>Download </strong> https://static.myoctank.net/public/ai-ml-workshop.zip to a local folder. We will use it for lab 2. </li>
 
       </p>
         <h5>If you want to run lab2 on your own computer</h5>
@@ -36,6 +37,16 @@
         
 
         <h3 id="lab1">Lab 1 - Customer Churn Analysis</h3>
+        Excerpt from <a href="https://aws.amazon.com/blogs/machine-learning/predicting-customer-churn-with-amazon-machine-learning/"> this blog post</a>
+        <p>
+        <i>Losing customers is costly for any business. Identifying unhappy customers early on gives you a chance to offer them incentives to stay. 
+        This post describes using machine learning (ML) for the automated identification of unhappy customers, also known as customer churn prediction. ML models rarely give perfect predictions though, so my post is also about how to incorporate the relative costs of prediction mistakes when determining the financial outcome of using ML.
+        </p>
+
+        <p>I use an example of churn that is familiar to all of us–leaving a mobile phone operator.  Seems like I can always find fault with my provider du jour! And if my provider knows that I’m thinking of leaving, it can offer timely incentives–I can always use a phone upgrade or perhaps have a new feature activated–and I might just stick around. Incentives are often much more cost effective than losing and reacquiring a customer.
+        </p>
+        </i>
+    
         Instruction: 
             <li>From AWS Console, Goto SageMaker</li>
             <li>Notebook instances -> ml-workshop-notebook -> Open Jupyter</li>
@@ -48,16 +59,6 @@
        
 
         <h3 id="lab2">Lab 2 - Extract Sentiments from Voice using Amazon Transcribe and Comprehend</h3>
-        Excerpt from <a href="https://aws.amazon.com/blogs/machine-learning/predicting-customer-churn-with-amazon-machine-learning/"> this blog post</a>
-        <p>
-        <i>Losing customers is costly for any business. Identifying unhappy customers early on gives you a chance to offer them incentives to stay. 
-        This post describes using machine learning (ML) for the automated identification of unhappy customers, also known as customer churn prediction. ML models rarely give perfect predictions though, so my post is also about how to incorporate the relative costs of prediction mistakes when determining the financial outcome of using ML.
-        </p>
-
-        <p>I use an example of churn that is familiar to all of us–leaving a mobile phone operator.  Seems like I can always find fault with my provider du jour! And if my provider knows that I’m thinking of leaving, it can offer timely incentives–I can always use a phone upgrade or perhaps have a new feature activated–and I might just stick around. Incentives are often much more cost effective than losing and reacquiring a customer.
-        </p>
-        </i>
-    
         Instruction: 
             <li>Login to AWS Console </li>
             <li>Goto IAM -> Users -> transcribe-user -> Security Credentials -> Create access key.  Record the Access key ID and Secret access key for later use </li> 
@@ -77,12 +78,9 @@
 
         <p>Using Cloud9 IDE to work with the code</p>
         <li>From AWS Console -> Cloud9</li>
-        <li>File -> upload local files : select the ai-ml-workshop.zip file you downloaded </li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        
+        <li>Create an environment, with t3.small</li>
+        <li>File -> upload local files : select the ai-ml-workshop.zip file you downloaded </li>        
+        <li>In the console window, unzip ai-ml-workshop.zip</li>
     </div>
 </body>
 
