@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Custom resource to create a SageMaker notebook. License: (MIT-0: https://github.com/aws/mit-0) (qs-1o9abmj8n)'
+Resources:
+  Cloud9Environment:
+    Type: AWS::Cloud9::EnvironmentEC2
+    Properties: 
+      AutomaticStopTimeMinutes: 60
+      Description: 'Online IDE for workshop'
+      InstanceType: t2.micro
+      Name: 'Workshop Cloud9'
+      OwnerArn: !Sub "arn:aws:sts::${AWS::AccountId}:assumed-role/TeamRole/MasterKey"
+  TranscribeComprehendUser:
+    Type: AWS::IAM::User
+    Properties: 
+      Path: "/"
+      Policies: 
+        - PolicyName: myTranscribeFullAccess
+          PolicyDocument: 
+            Version: "2012-10-17"
+            Statement: 
+            - Effect: Allow
+              Action:
+              - transcribe:*
+              Resource: "*"
+            - Effect: Allow
+              Action:
+              - s3:GetObject
+              Resource:
+              - arn:aws:s3:::*transcribe*
+        - PolicyName: myComprehendFullAccess
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement: 
+            - Effect: Allow
+              Action: 
+              - comprehend:*
+              - s3:ListAllMyBuckets
+              - s3:ListBucket
+              - s3:GetBucketLocation
+              - iam:ListRoles
+              - iam:GetRole
+              Resource: "*"
+      UserName: 'transcribe-user'

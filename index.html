@@ -21,35 +21,67 @@
         <h2>AI/ML Workshop</h2>
 
         <h3 id="setup">Setup</h3>
+        <li><strong>Code repo: </strong> https://github.com/jxuamazon/ai-ml-workshop </li>
+        <li><strong>Your AWS account: </strong>https://dashboard.eventengine.run/login?hash=xxxxxxxxxxxx </li>
+        <li><strong>Download </strong> https://static.myoctank.net/public/ai-ml-workshop.zip to local folder. We will use it for lab 2. </li>
 
-        AWS Account: you need to have an AWS IAM user account that has the following permissions: S3FullAccess, AmazonTranscribeFullAccess, ComprehendFullAccess, AmazonSageMakerFullAccess  <br/>
+      </p>
+        <h5>If you want to run lab2 on your own computer</h5>
+        (You can ignore this if you are using Aplify from AWS console)
 
-        Python 3 installed<br/>
+        <li>AWS Account: you need to have an AWS IAM user account that has the following permissions: S3FullAccess, AmazonTranscribeFullAccess, ComprehendFullAccess, AmazonSageMakerFullAccess</li>
+        <li>Python 3 installed</li>
+        <li>AWS CLI - installed</li>        
+        <li>npm installed</li>
         
-        AWS CLI - installed <br/>
-        
-        npm installed<br/>
-        
-        Code repo: <a = href="https://github.com/jxuamazon/ai-ml-workshop">Github Repo</a> <br/> 
-
 
         <h3 id="lab1">Lab 1 - Customer Churn Analysis</h3>
         Instruction: 
-       
-            <li>Open SageMaker Notebook</li>
-            <li>Open new terminal (under Files tab, far right:  New/Terminal</li>
-            <li><code>%cd SageMaker</code></li>
+            <li>From AWS Console, Goto SageMaker</li>
+            <li>Notebook instances -> ml-workshop-notebook -> Open Jupyter</li>
+            <li>Open new terminal (under Files tab, far right:  New/Terminal) </li>
+            <li>In the terminal window: <code>%cd SageMaker</code></li>
             <li><code>%git clone https://github.com/jxuamazon/ai-ml-workshop </code></li>
-            <li>In Jupyter Notebook, open ai-ml-workshop/lab-customer-churn/</li>
+            <li>In Jupyter Notebook, open ai-ml-workshop/lab-customer-churn/customer_churn_demo.ipynb</li>
+            <li>Kernel/Restart and Clear Output</li>
+            <li>"Run" go through each step</li>
        
 
         <h3 id="lab2">Lab 2 - Extract Sentiments from Voice using Amazon Transcribe and Comprehend</h3>
+        Excerpt from <a href="https://aws.amazon.com/blogs/machine-learning/predicting-customer-churn-with-amazon-machine-learning/"> this blog post</a>
+        <p>
+        <i>Losing customers is costly for any business. Identifying unhappy customers early on gives you a chance to offer them incentives to stay. 
+        This post describes using machine learning (ML) for the automated identification of unhappy customers, also known as customer churn prediction. ML models rarely give perfect predictions though, so my post is also about how to incorporate the relative costs of prediction mistakes when determining the financial outcome of using ML.
+        </p>
+
+        <p>I use an example of churn that is familiar to all of us–leaving a mobile phone operator.  Seems like I can always find fault with my provider du jour! And if my provider knows that I’m thinking of leaving, it can offer timely incentives–I can always use a phone upgrade or perhaps have a new feature activated–and I might just stick around. Incentives are often much more cost effective than losing and reacquiring a customer.
+        </p>
+        </i>
+    
         Instruction: 
+            <li>Login to AWS Console </li>
+            <li>Goto IAM -> Users -> transcribe-user -> Security Credentials -> Create access key.  Record the Access key ID and Secret access key for later use </li> 
+            
+            <img src="images/access_key.png"/>
+            
+            <li>From AWS Console/Services: Go to "AWS Amplify"</li>
+            <li>Expand the menu icon on the left -> All apps -> "Connect app" - chose Deploy without Git provider</li>
+            <li>Fill in "App name", "Environment Name" and use 
+                "Drag and Drop" : ai-ml-workshop.zip </li>
+            <li> Save and Deploy</li>
+            <li> Once deployment is completed, click on the "Demo" link under Lab 2 </li>
 
-            <li> </li>
-
+        * If you use Git provider (e.g Github), you can automatically redeploy the app whenever new code is checked in. And Amplify will take care of the build and deployment for you. 
 
         <a href="lab-transcribe/index.html">Demo</a>
+
+        <p>Using Cloud9 IDE to work with the code</p>
+        <li>From AWS Console -> Cloud9</li>
+        <li>File -> upload local files : select the ai-ml-workshop.zip file you downloaded </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
         
     </div>
 </body>
