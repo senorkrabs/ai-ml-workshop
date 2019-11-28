@@ -11,11 +11,12 @@ This application is based on this aws sample with modification to add comprehend
 ![iam](/images/access_key.png)
 
 - From AWS Console/Services: Go to "AWS Amplify"
-        - Expand the menu icon on the left -> All apps -> "Connect app" - chose Deploy without Git provider
-        - Fill in "App name", "Environment Name" and use "Drag and Drop" : ai-ml-workshop.zip
-        - Save and Deploy
-        - Once deployment is completed, click on the "Demo Transcribe and Comprehend application" link below
-        [Demo Transcribe and Comprehend application](/lab-transcribe/index.html)
+    - Expand the menu icon on the left -> All apps -> "Connect app" - chose Deploy without Git provider
+    - Fill in "App name", "Environment Name" and use "Drag and Drop" : ai-ml-workshop.zip
+    - Save and Deploy
+    - Once deployment is completed, click on the "Demo Transcribe and Comprehend application" link below
+
+[Demo Transcribe and Comprehend application](/lab-transcribe/index.html)
 
 * If you use Git provider (e.g Github), you can automatically redeploy the app whenever new code is checked in. And Amplify will take care of the build and deployment for you.
 
