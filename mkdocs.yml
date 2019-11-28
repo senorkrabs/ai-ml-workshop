@@ -1,0 +1,21 @@
+# run mkdocs serve for development
+# run mkdocs build for building
+site_name: AI/ML Workshop
+nav:
+  - Introduction: index.md
+  - Modules: 
+    - 0 - Agenda : module_0_Agenda.md
+    - 1 - Setup : module_1_Setup.md
+
+extra_css: [extra.css]
+extra_javascript: [extra.js]
+
+theme:
+  name: material
+  logo: 'images/AWS_logo_RGB_REV.svg'
+  palette:
+    primary: blue grey
+    accent: deep orange
+
+markdown_extensions:
+  - admonition
