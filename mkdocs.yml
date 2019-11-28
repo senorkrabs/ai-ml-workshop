@@ -4,8 +4,10 @@ site_name: AI/ML Workshop
 nav:
   - Introduction: index.md
   - Modules: 
-    - 0 - Agenda : module_0_Agenda.md
-    - 1 - Setup : module_1_Setup.md
+    - Setup : module_0_Setup.md
+    - Lab 1 - Customer Churn: module_1_Lab_1_Customer_Churn_Analysis.md
+    - Lab 2 - Sentiment from Voice: module_2_Lab_2_Sentiment_from_voice.md
+    - Lab 3 - DeepRacer: module_3_Lab_3_DeepRacer.md
 
 extra_css: [extra.css]
 extra_javascript: [extra.js]

@@ -38,7 +38,11 @@ npm install --global local-web-server
 ws
 ```
 
-
+#### Documents
+The documentation in Docs directory can be built with 
+```
+mkdocs build 
+```
 
 #### Credits
 
